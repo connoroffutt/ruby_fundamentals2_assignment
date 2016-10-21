@@ -44,3 +44,10 @@ cristina = Student.new("Cristina","Angelo")
 
 puts cristina.greetings
 puts chris.greetings
+puts chris.teach
+puts cristina.learn
+
+#puts chris.learn
+#puts cristina.teach
+  # the above code will not work as even though they are both considered a person only cristina is considered a student and chris is a teacher.
+  
