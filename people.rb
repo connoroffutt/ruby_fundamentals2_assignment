@@ -12,10 +12,23 @@ attr_accessor :last_name, :first_name
   end
 
   def greetings
-    puts "hi my name is #{full_name}"
-
+    puts "Hi my name is #{ full_name }! Nice to meet you!"
+  end
 end
 
+
+
+class Instructor < Person
+
+  def full_name
+    "Instructor #{ super }"
+  end
+
+  def teach
+    puts "Everything in Ruby is an Object!"
+  end
+
+end
 
 class Student < Person
 
@@ -26,10 +39,8 @@ class Student < Person
 
 end
 
-class Instructor < Person
+chris = Instructor.new("Chris","Roberts")
+cristina = Student.new("Cristina","Angelo")
 
-  def teach
-    puts "Everything in Ruby is an Object!"
-  end
-
-end
+puts cristina.greetings
+puts chris.greetings
